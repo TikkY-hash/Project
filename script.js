@@ -1,14 +1,16 @@
-let numberOfFilms = prompt("Сколько фильмов вы смотрели", "");
+const numberOfFilms = +prompt("Сколько фильмов вы смотрели", "");
 
-let prersonalMovieDB = {
+const prersonalMovieDB = {
     count : numberOfFilms,
-    movies : {
-
-    },
-    actors : {
-
-
-    },
+    movies : {},
+    actors : {},
     genres : [],
     privat : false
 };
+
+const firstQuestion = prompt("Один из полседних просмотренных фильмов", ""),
+      secondQuestion = prompt("На сколько оцените его?", "");
+
+prersonalMovieDB.movies[firstQuestion] = secondQuestion;
+
+console.log(prersonalMovieDB);
