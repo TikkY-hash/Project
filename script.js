@@ -20,11 +20,11 @@ if (personalMovieDB.count < 10) {
     alert("Произошла ошибка");
 }
 
+let i = 0;
 
-
-for (let i = 0; i < 2; i++) {
-    let checkAnswer;
-    do {
+while (i < 2) {
+    let checkAnswer = true;
+    while (checkAnswer == true) {
         checkAnswer = true;
         const firstQuestion = prompt("Один из последних просмотренных фильмов", ""),
             secondQuestion = prompt("На сколько оцените его?", "");
@@ -32,13 +32,12 @@ for (let i = 0; i < 2; i++) {
             firstQuestion !== null && secondQuestion !== null && firstQuestion.length < 50 && secondQuestion < 50) {
             personalMovieDB.movies[firstQuestion] = secondQuestion;
             console.log('done');
-        } else {
             checkAnswer = false;
+        } else {
             console.log('error');
         }
-    } while (checkAnswer == false);
+    }
+    i++;
 }
-
-
 
 console.log(personalMovieDB);
