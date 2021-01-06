@@ -20,8 +20,13 @@ const personalMovieDB = {
 };
 
 
- 
+function showMyDb() {
+    if (personalMovieDB.privat != true) {
+        console.log(personalMovieDB);
+    }
+}
 
+showMyDb();
 
 function showCount() {
     if (personalMovieDB.count < 10) {
@@ -36,9 +41,6 @@ function showCount() {
 }
 
 showCount();
-
-
-
 
 function sortAnswer() {
     let i = 0;
@@ -63,4 +65,3 @@ function sortAnswer() {
 
 sortAnswer();
 
-console.log(personalMovieDB);
