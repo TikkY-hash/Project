@@ -9,7 +9,7 @@ function showNumberOfFilms() {
     }
 }
 
-showNumberOfFilms();
+// showNumberOfFilms();
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -20,13 +20,13 @@ const personalMovieDB = {
 };
 
 
-function showMyDb() {
-    if (personalMovieDB.privat != true) {
+function showMyDb(hide) {
+    if (!hide) {
         console.log(personalMovieDB);
     }
 }
 
-showMyDb();
+ //showMyDb(personalMovieDB.privat);
 
 function showCount() {
     if (personalMovieDB.count < 10) {
@@ -40,7 +40,7 @@ function showCount() {
     }
 }
 
-showCount();
+// showCount();
 
 function sortAnswer() {
     let i = 0;
@@ -63,5 +63,15 @@ function sortAnswer() {
     }
 }
 
-sortAnswer();
+// sortAnswer();
 
+function writeYourGenres() {
+    for (let i = 0; i < 3; i++) {
+        const userFavoriteTypes = prompt(`Ваш любимый жанр под номером ${i + 1}`, "");
+        personalMovieDB.genres[i] = userFavoriteTypes;
+    }
+}
+
+//writeYourGenres();
+
+//console.log(personalMovieDB);
