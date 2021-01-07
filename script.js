@@ -1,17 +1,17 @@
 "use strict";
 
-let numberOfFilms;
+
 
 const personalMovieDB = {
-    count: numberOfFilms,
+    count: 0,
     movies: {},
     actors: {},
     genres: [],
     privat: true,
     showNumberOfFilms() {
-        numberOfFilms = prompt("Сколько фильмов вы смотрели", "");
-        while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-            numberOfFilms = prompt("Сколько фильмов вы смотрели", "");
+        this.count = prompt("Сколько фильмов вы смотрели", "");
+        while (this.count == '' || this.count == null || isNaN(this.counts)) {
+            this.count = prompt("Сколько фильмов вы смотрели", "");
         }
     },
     showMyDb(hide) {
@@ -61,8 +61,8 @@ const personalMovieDB = {
             this.genres[i] = answerOfUser;
         }
 
-        this.genres.forEach((value, index, array) => {
-            console.log(`${value} #${index + 1} - это ${array}`);
+        this.genres.forEach((value, index) => {
+            console.log(`Любимый жанр #${index + 1} - это ${value}`);
         });
     },
     toggleVisibleMyDB() {
